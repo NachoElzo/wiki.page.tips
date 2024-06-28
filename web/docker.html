@@ -8,5 +8,93 @@
   </head>
   <body>
     <h1>Docker</h1>
+
+    <h3>Pre-conditions to install</h3>
+    <ul>
+      <li>
+        Install Docker from:
+        <a href="https://www.docker.com/"><span>HERE</span></a>
+      </li>
+    </ul>
+    <h3>Docker commands</h3>
+    <ul>
+      <li>
+        Build docker img defined inside docker.compose:
+        <span class="terminal-commands">&nbsp;docker build -t imgName .</span>
+      </li>
+      <li>
+        start the sever
+        <span class="terminal-commands">&nbsp;docker compose up -d</span>
+      </li>
+    </ul>
+
+    <h3>Set-up jenkins password inside a docker container</h3>
+    <ul>
+      <li>open and run the image that contains the jenkins server</li>
+      <img
+        class="m-size-35"
+        src="../img/docker/run-img.png"
+        alt="run_docker_img"
+      />
+      <li>copy the key in the log tab</li>
+      <img
+        class="m-size-25"
+        src="../img/docker/log-key.png"
+        alt="run_docker_img"
+      />
+      <li>paste the key in: localhost:8080</li>
+      <img
+        class="m-size-35"
+        src="../img/docker/jenkins-password.png"
+        alt="run_docker_img"
+      />
+    </ul>
   </body>
 </html>
+<!-- COMMAND FOR BUILD DOCKER IMAGE SETED IN DOCKER COMPOSE FILE docker build -t
+my-jenkins . FROM mcr.microsoft.com/playwright:v1.42.1-jammy # CREATING A FOLDER
+FOR STORE THE PROJECT RUN mkdir /app # directory in where we are going to work
+WORKDIR /app # copy root project with . / and paste it in /app (docker) COPY .
+/app/ #INSTALLING DEPENDENCIES RUN npm install --force RUN npx playwright
+install #we are ready to build the container #in console project // the last dot
+is pointing that you want to build in this directory # docker build -t
+pw-dockerContainerName . # check docker images to make sure that works docker
+images #FOR RUN THE IMAGE (and we acces to the image root) # docker run -it
+dockerImageName #ONECE YOU ARE IN execute the npx or npm command to run #with
+control + d we stop the session #Create a docker-compose.yml in file direcory
+for the orchestration of you containers (can manage and install dependencies)
+#after all having dependencies in a docker compose.yml and dockerfile, you just
+have to execute this command inside your project #docker-compose up --build  -->
+
+<!-- # download docker desktop from:  https://www.docker.com/get-started/
+# log and open docker desktop
+
+- Docker virtualization uses machine resources on demand in the execution time
+
+- add a configin above projects in playwright.config.ts for run the app before execute the test cases -->
+<!-- 
+  webServer:{
+    command: 'npm run start',
+    url: 'http://localhost:4200/'
+  } -->
+
+<!-- create a docker file in the root of the project "Dockerfile" -->
+
+<!-- # last version
+version: '3.8'
+services:
+  # any service name
+  playwright-test:
+    # image name
+    image: playwright-test
+    build:
+      # will build in the root .
+      context: .
+      # will get the context from the dockerfile
+      dockerfile: ./Dockerfile
+      # npm scrip command to be executed
+    command: npm run docker:run
+    # Will copy the test results from the image to you local
+    volumes:
+      - ./playwright-report/:/app/playwright-report
+      - ./testResults/:/app/testResults -->
