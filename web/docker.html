@@ -6,47 +6,44 @@
     <title>Docker</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
+
   <body>
     <h1>Docker</h1>
-
     <h3>Pre-conditions to install</h3>
     <ul>
       <li>
-        Install Docker from:
+        Install Docker from
         <a href="https://www.docker.com/"><span>HERE</span></a>
       </li>
     </ul>
-    <h3>Docker commands</h3>
+    <h3>Docker commands with docker files to configure images</h3>
     <ul>
       <li>
-        Build docker img defined inside docker.compose:
+        Build docker img
         <span class="terminal-commands">&nbsp;docker build -t imgName .</span>
       </li>
       <li>
-        start the sever
+        Start the sever
         <span class="terminal-commands">&nbsp;docker compose up -d</span>
       </li>
+      <li>
+        Down the sever
+        <span class="terminal-commands">&nbsp;docker compose down</span>
+      </li>
     </ul>
-
-    <h3>Set-up jenkins password inside a docker container</h3>
+    <h3>Find files and use terminal inside the docker img</h3>
     <ul>
-      <li>open and run the image that contains the jenkins server</li>
+      <li>Open and run your docker image in docker desktop</li>
       <img
         class="m-size-35"
         src="../img/docker/run-img.png"
-        alt="run_docker_img"
+        alt="run-docker-image"
       />
-      <li>copy the key in the log tab</li>
+      <li>Acces to the image files, logs and terminal</li>
       <img
-        class="m-size-25"
-        src="../img/docker/log-key.png"
-        alt="run_docker_img"
-      />
-      <li>paste the key in: localhost:8080</li>
-      <img
-        class="m-size-35"
-        src="../img/docker/jenkins-password.png"
-        alt="run_docker_img"
+        class="m-size-50"
+        src="../img/docker/img-options.png"
+        alt="image-options"
       />
     </ul>
   </body>

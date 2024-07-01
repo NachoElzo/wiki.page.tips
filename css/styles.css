@@ -37,3 +37,13 @@ a:visited {
   width: 25%;
   height: 25%;
 }
+.m-size-50{
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-left: 30px;
+  width: 50%;
+  height: 50%;
+}
+.bullet-li{
+  margin-left: -20px;
+}

@@ -6,204 +6,160 @@
     <title>Jenkins</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
+
   <body>
     <h1>Jenkins</h1>
+    <h3>Pre-conditions to install</h3>
     <ul>
-      <h4>Pre-conditions to install</h4>
-      <li>Install Jenkins<a href="https://www.jenkins.io/">here</a></li>
-      <li>Install brew command, execute: brew install jenkins-lts</li>
-      <!-- <h5>Jenkins commands</h5>
-      <li>Start the Jenkins service: brew services start jenkins-lts</li>
-      <li>Restart the Jenkins service: brew services restart jenkins-lts</li>
-      <li>Update the Jenkins version: brew upgrade jenkins-lts</li>
-      <li>stop jenkins services: brew services stop jenkins-lts</li>
-    </ul>
-    <ul>
-      <h3>How to use it</h3>
-      <li>brew services start jenkins-lts</li>
-      <li>navigate to the 8080<a href="http://localhost:8080">here</a></li>
-      <li>You will see jenkins home page</li>
       <li>
-        Search for the path displayed in the web use finder (may + comd + . to
-        see hiden folders) copy and paste the key
-      </li>
-      <li>install suggested plugins</li>
-      <li>create an admin user</li>
-    </ul>
-    <h4>Install dependencies for your project</h4>
-    <ul>
-      <li>go to the left menu manage jenkins</li>
-      <li>select tools</li>
-    </ul>
-    <h4>Pluggins for running projects</h4>
-    <ul>
-      <li>nodeJS</li>
-      <li>ansiColor (avoid special characters in the console results)</li>
-      <li>HTML Publisher plugin (html report for execution)</li>
-    </ul>
-    <h4>Configure a free style for a cypress project</h4>
-    <ul>
-      <li>left menu/ new item</li>
-      <li>add a name to a free style project</li>
-      <li>
-        In Genral options start to fill the project configurations parameters
-      </li>
-      <li>general section/advance</li>
-      <li>
-        check the box use custom workspace (path of you cypress project (path in
-        where your project will be allocated after each jenkins execution), use
-        pwd in mac inside your cypress project)
+        Install brew from
+        <a href="https://brew.sh/"><span>HERE</span></a>
       </li>
       <li>
-        check the box gitHub project and add the url of your repository (you
-        execution will run and clone this repo)
+        Install jenkins from
+        <a href="https://www.jenkins.io/"><span>HERE</span></a>
       </li>
+    </ul>
+    <h3>Glosary</h3>
+    <ul>
+      <li>
+        Jenkins
+        <ul>
+          <li class="bullet-li">
+            Server app for build and test with CI/CD process
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Jenkins Job
+        <ul>
+          <li class="bullet-li">Scripts that we want to automate</li>
+        </ul>
+      </li>
+
+      <li>
+        Process in CI/CD
+        <ul>
+          <li class="bullet-li">Code compilation</li>
+          <li class="bullet-li">Run test</li>
+          <li class="bullet-li">Build a new version of the app</li>
+          <li class="bullet-li">Deploy the app to the server</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Jenkins commands</h3>
+    <ul>
+      <li>
+        Install jenkins with brew
+        <span class="terminal-commands">&nbsp;brew install jenkins-lts</span>
+      </li>
+      <li>
+        Start Jenkins service
+        <span class="terminal-commands"
+          >&nbsp;brew services start jenkins-lts</span
+        >
+      </li>
+      <li>
+        Restart the Jenkins service
+        <span class="terminal-commands"
+          >&nbsp;brew services restart jenkins-lts</span
+        >
+      </li>
+      <li>
+        Update the Jenkins version
+        <span class="terminal-commands">&nbsp;brew upgrade jenkins-lts</span>
+      </li>
+      <li>
+        Stop jenkins services
+        <span class="terminal-commands"
+          >&nbsp;brew services stop jenkins-lts</span
+        >
+      </li>
+    </ul>
+    <h3>Jenkins initial set-up</h3>
+    <ol>
+      <li>
+        Start Jenkins service
+        <span class="terminal-commands"
+          >&nbsp;brew services start jenkins-lts</span
+        >
+      </li>
+      <li>
+        Navigate to the local host 8080
+        <a href="http://localhost:8080"><span>HERE</span></a>
+      </li>
+      <li>Search the path displayed in the jenkins login page</li>
+      <li>Search the secret key from the file path</li>
+      <li>
+        Paste the key in the password field for starting configuration process
+      </li>
+      <li>Install suggested plugins</li>
+      <li>Create an admin user</li>
+    </ol>
+
+    <h3>Install pluggins</h3>
+    <ul>
+      <li>Go to the left menu manage jenkins</li>
+      <li>Select pluggins</li>
+      <li>
+        Useful pluggins
+        <ul>
+          <li class="bullet-li">NodeJS</li>
+          <li class="bullet-li">
+            AnsiColor (avoid special characters in the console results)
+          </li>
+          <li class="bullet-li">
+            HTML Publisher plugin (html report for execution)
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Configure a free style project</h3>
+    <ul>
+      <li>Left menu/ new item</li>
+      <li>Add a name to a free style project</li>
+      <li>
+        In General options start to fill the project configurations parameters
+      </li>
+      <ul>
+        <li>
+          In git hub project field, you can add your project repo from github
+        </li>
+        <li>
+          In use custom work space, add the path in where your project will be
+          allocated after each jenkins build
+        </li>
+      </ul>
       <img
-        class="display-50P"
-        src="./img/jenkins/generalexecutionoption.png"
+        class="m-size-50"
+        src="../img/jenkins/generalexecutionoption.png"
         alt="general"
       />
-      <li>add a name for display name ands save</li>
-      <li>if you dont have nodeJS pluggin installed and configured</li>
-      <li>
-        install nod js pluggin in manage jenkins/plugins/ -> search for nodeJS
-        plugin and install
-      </li>
-      <li>in dashboard/manage section select tools add a nodejs setting</li>
-      <img
-        class="display-50P"
-        src="./img/jenkins/nodeConfigurationPlugin.png"
-        alt="nodePlugin"
-      />
+    </ul>
+    <h3>Set up node environment in a free style project</h3>
+    <ul>
       <li>Go to you jenkins project and configure settings</li>
       <li>In build environment check Provide Node & npm bin/ folder to PATH</li>
       <li>Select the node configuration previously setted</li>
-      <li>leave the other parameters by default</li>
+      <li>Leave the other parameters by default</li>
       <img
-        class="display-50P"
-        src="./img/jenkins/nodeEnvironment.png"
+        class="m-size-50"
+        src="../img/jenkins/nodeEnvironment.png"
         alt="buildEnvironment"
       />
-      <li>In build stepts section add execute shell</li>
+      <li>In build stepts section, add execute shell</li>
       <li>
-        add the npm command that you have in your script from your
-        package.jsonfile to execute you cypress project
+        Add the npm command that you have in your project script from your
+        package.json
       </li>
       <img
-        class="display-50P"
-        src="./img/jenkins/buildStepsts.png"
+        class="m-size-50"
+        src="../img/jenkins/buildStepsts.png"
         alt="buildStepts"
       />
-      <li>now you are able to execute your local cypress project</li>
     </ul>
-    <p></p>
-    <h4>Additional handy configurations</h4>
-    <h5>add multiple executions option to your project</h5>
-    <ul>
-      <li>
-        go to you project options/general -> check This project is parameterized
-      </li>
-      <li>add parameter/choice parameter</li>
-      <li>add a name example scrips</li>
-      <li>add your scrips that you have in package.json cypress project</li>
-      <img
-        class="display-50P"
-        src="./img/jenkins/cypressScripts.png"
-        alt="cypressScripts"
-      />
-      <img
-        class="display-50P"
-        src="./img/jenkins/scriptParameters.png"
-        alt="scriptParameters"
-      />
-      <li>
-        in build stepsts (execute shell), add npm run %parameterChoiseName% ->
-        (name added in the choice parameter option for your scripts)
-      </li>
-      <li>after save you will see in build with parameters your scripts</li>
-      <img
-        class="display-50P"
-        src="./img/jenkins/buildWithParameters.png"
-        alt="buildParameters"
-      />
-    </ul>
-    <h4>avoid special characters in your log</h4>
-    <ul>
-      <li>
-        install ansiColor plugin in manage jenkins/plugins/available plugins
-      </li>
-      <li>go to you jenkins project configuration/build environment</li>
-      <li>check the option Color ANSI Console Output</li>
-      <img
-        class="display-50P"
-        src="./img/jenkins/avoidSpecialCharacterscoloransi.png"
-        alt="coloransi"
-      />
-    </ul>
-
-    <h4>install Publisher html report plugin</h4>
-    <ul>
-      <li>
-        install HTML publisher plugin in manage jenkins/plugins/available
-        plugins
-      </li>
-      <li>
-        go to you jenkins project configuration/Post-build Actions section
-      </li>
-      <li>select publish HTML reports</li>
-      <li>select add</li>
-      <img
-        class="display-50P"
-        src="./img/jenkins/reportHTMLparameters.png"
-        alt="HTMLreport"
-      />
-      <li>
-        **To avoid execution issue, create a empty index.js file inside the
-        report folder
-      </li>
-      <img
-        class="display-20P"
-        src="./img/jenkins/htmlissuefile.png"
-        alt="HTMLreport"
-      />
-    </ul>
-
-    <ul>
-      <h2>If you forgot your credentials</h2>
-      <li>
-        Go tho the .jenkins folder in you users folders and chenge the value to
-        false (hideen folder)
-      </li>
-      <li>
-        <img
-          class="display-50P"
-          src="./img/jenkins/credentialLost.png"
-          alt="jenkins"
-        />
-      </li>
-      <li>stop and restart jenkins in the console</li>
-      <li>logs to the jenkins ui local host 8080</li>
-      <li>go to dashboard-manage jenkins - security</li>
-      <li>re-set security realms to jenkins own user database</li>
-      <li>
-        <img
-          class="display-50P"
-          src="./img/jenkins/jenkinsConfig.png"
-          alt="jenkins"
-        />
-      </li>
-      <li>Change user password</li>
-    </ul> -->
   </body>
 </html>
-
-<!-- ### How to run the project in docker (will execute compose file)
-docker-compose up --build
-
-## Jenkins commands
-- Start the Jenkins service: brew services start jenkins-lts
-- Restart the Jenkins service: brew services restart jenkins-lts
-- Update the Jenkins version: brew upgrade jenkins-lts
-- Stop jenkins services: brew services stop jenkins-lts
-- Make sure that you have correctly created a pipeline
-- Reamember to set npm in tools to be correctly installed  -->
