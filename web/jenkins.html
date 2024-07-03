@@ -37,7 +37,30 @@
           <li class="bullet-li">Scripts that we want to automate</li>
         </ul>
       </li>
-
+      <li>
+        Pipeline
+        <ul>
+          <li class="bullet-li">It is a set of stages</li>
+        </ul>
+      </li>
+      <li>
+        Stages
+        <ul>
+          <li class="bullet-li">
+            The stages block contains most of the work that the pipeline
+            performs
+          </li>
+        </ul>
+      </li>
+      <li>
+        Jenkins agents
+        <ul>
+          <li class="bullet-li">
+            Program that executes the stages, it can be multiple stages for
+            balnce the load
+          </li>
+        </ul>
+      </li>
       <li>
         Process in CI/CD
         <ul>
@@ -117,7 +140,7 @@
       </li>
     </ul>
 
-    <h3>Configure a free style project</h3>
+    <h3>How to create a free style project</h3>
     <ul>
       <li>Left menu/ new item</li>
       <li>Add a name to a free style project</li>
@@ -159,6 +182,70 @@
         class="m-size-50"
         src="../img/jenkins/buildStepsts.png"
         alt="buildStepts"
+      />
+    </ul>
+
+    <h3>How to create a new pipeline</h3>
+    <ul>
+      <li>Left menu/ new item</li>
+      <li>Add a name to pipeline</li>
+      <li>
+        In pipline section you will be able to create a new piple "use groovy"
+      </li>
+      <li>With sh command create scripts for linux</li>
+      <img
+        class="m-size-35"
+        src="../img/jenkins/ui-pipeline-.png"
+        alt="pipelines"
+      />
+      <li>Save and build the pipline created</li>
+      <li>
+        Access to the executed job and you will be able to see the console
+        output
+      </li>
+      <img
+        class="m-size-50"
+        src="../img/jenkins/console-output.png"
+        alt="console"
+      />
+    </ul>
+
+    <h3>Acces to the files or folders created in a pipeline</h3>
+
+    <ul>
+      <li>Open the build executions options, select the section workspaces</li>
+      <li>
+        Click on the path displayed (is where the files created are located)
+      </li>
+      <img
+        class="m-size-35"
+        src="../img//jenkins/filesCreated.png"
+        alt="path to files created"
+      />
+      <li>Remove logs and files from the workspace</li>
+      <li>Create post stage that cleans the workspace</li>
+      <img
+        class="m-size-35"
+        src="../img//jenkins/clean-workspace.png"
+        alt="path to files created"
+      />
+    </ul>
+    <h3>
+      Creates a Post acction that stores all logs and files in artifact path
+    </h3>
+    <ul>
+      <li>Add a post action in the pipeline creating an artifact</li>
+      <img
+        class="m-size-35"
+        src="../img//jenkins/artifacts-folder.png"
+        alt="path to files created"
+      />
+      <li>Inside the build options you will se the artifact path</li>
+      <li>You will be able to click and open the artifacts</li>
+      <img
+        class="m-size-35"
+        src="../img//jenkins/open-artifact.png"
+        alt="path to files created"
       />
     </ul>
   </body>
