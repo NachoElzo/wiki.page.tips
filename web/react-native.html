@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>React Native</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <h1>React Native</h1>
+    <h3>Pre-requirements</h3>
+    <ul>
+      <li>
+        React native documentation
+        <a href="https://reactnative.dev/"><span>HERE</span></a>
+      </li>
+      <li>VIsual code</li>
+      <li>
+        Android Studio virtual device
+        <ul>
+          <li>Create a device with the play store icon displayed</li>
+        </ul>
+        <img
+          class="m-size-35"
+          src="../img/react-native/android-playable.png"
+          alt="android-playable"
+        />
+      </li>
+      <li>Xcode virtual device
+        <li>Make sure that you have created a device with the iOS configured</li>
+        <li>Open apple applications folder </li>
+        <li>Click right button on xcode</li>
+        <li>Select show package content</li>
+        <img class="m-size-35" src="../img/react-native/package-content.png" alt="package-content">
+        <li>Follow the path: contents/Developer/applications </li>
+        <li>Open the simulator.app</li>
+      </li>
+      <li>Brew</li>
+      <li>
+        Install Watchman for preventing watch files error in execution
+        <ul>
+          <li class="terminal-commands">brew intall watchman</li>
+        </ul>
+        <img
+          class="m-size-35"
+          src="../img/react-native/watchman-error.png"
+          alt="watchman-error"
+        />
+      </li>
+    </ul>
+    <h3>Installation</h3>
+    <ul>
+      <li>Create a folder where your react-native projects will be stored</li>
+
+      <li>Open a terminal inside you project</li>
+      <li>
+        Create project with expo, type in terminal:
+        <span class="terminal-commands">&nbsp;npx create-expo-app@latest</span>
+      </li>
+      <li>
+        Options with blank project and project name:
+        <span class="terminal-commands"
+          >&nbsp;npx create-expo-app@latest --template blank projectName</span
+        >
+      </li>
+    </ul>
+    <h3>Npm scrips for run in differents devices</h3>
+    <ul>
+      <li class="terminal-commands">npm start</li>
+      <ul>
+        <li>
+          you will have to select the options displayed for run in differents
+          devices
+        </li>
+      </ul>
+      <li class="terminal-commands">npm run android</li>
+      <li class="terminal-commands">npm run ios</li>
+      <li class="terminal-commands">npm run web</li>
+    </ul>
+  </body>
+</html>

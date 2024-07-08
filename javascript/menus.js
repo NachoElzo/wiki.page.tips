@@ -1,9 +1,10 @@
 //TIPS MENU
 const tipsList = ["macOS", "VS Code", "GitHub Free Hosting"];
 const innerMenuTopics = document.querySelector(".topics-menu");
-//creates a lihtml tag with each items of the list
+//creates a li html tag with each items of the list
 let listItems = "";
 tipsList.forEach((tip) => {
+  //creates an url with the items list to lowercase and replace blanc spaces
   const url = `/web/${tip.toLowerCase().replace(/ /g, "-")}.html`;
   listItems += `<li><a href="${url}">${tip}</a></li>`;
 });
@@ -13,7 +14,7 @@ const htmlContent = `Tips <ul>${listItems}</ul>`;
 innerMenuTopics.innerHTML = htmlContent;
 
 //TUTORIAL MENU
-const tutorialList = ["Jenkins", "Docker", "add more items"];
+const tutorialList = ["Jenkins", "Docker", "Postman"];
 const innerTutorial = document.querySelector(".tutorial-menu");
 let tutorialItems = "";
 

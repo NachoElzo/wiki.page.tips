@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postman</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <h1>Postman</h1>
+    <h3>HTTP methods used in API requests</h3>
+    <ul>
+      <li>GET: typically used to request data from a specified resource</li>
+      <li>DELETE: typically used deletes the specified resource</li>
+      <li>POST: typically used to send data to a server to create a resource</li>
+      <li>PUT:  typically used to send data to a server and update a resource, typically replacing the entire object.</li>
+      <li>
+        PATCH: typically used to apply partial modifications to a resource, updating one or more elements within the object
+      </li>
+      <li>HEAD: typically uded to confirm if an endpoint exist or not</li>
+    </ul>
+
+    <h3>HTTP Responses</h3>
+    <ul>    
+      <li>Informational responses (100-199)</li>
+      <li>Successful responses (200-299)</li>
+      <li>Redirection messages (300-399)</li>
+      <li>Client error responses (400-499)</li>
+      <li>Server error responses (500-599)</li>
+    </ul>
+
+    <h3>Query parameters</h3>
+    <ul>
+        <li>parameters are defined in the api structure and is a value added in the url ex: a category of products</li>
+        <img class="m-size-50" src="../img/postman/queryParameyer.png" alt="query">
+    </ul>
+
+    <h3>Postman app</h3>
+    <ul>
+        <li>Create Workspace with the name of the project that you are going to work</a></li>
+        <li>Create collection (folder that contains a group of request)</li>
+        <img class="m-size-35" src="../img/postman/createCollections.png" alt="collection create">
+        <li>Create a request inside your collections</li>
+        <img class="m-size-35" src="../img/postman/createRequest.png" alt="request create">
+        <li>For POST methods make sure that you have configured in the body section *raw and JSON</li>
+        <img class="m-size-35" src="../img/postman/bodyPostSettings.png" alt="bodySettings">
+    </ul>
+    <h3>Postman collections options</h3>
+    <ul>
+        <li>Export your collection as JS file and then share</li>
+        <img class="m-size-35" src="../img/postman/exportCollection.png" alt="monitor">
+        <li>Create a link for sharing with API cloud (remember that current variables values are not going to be imported)</li>
+        <img class="m-size-35" src="../img/postman/url-sharing-collection.png" alt="api-sharing">
+    </ul>
+    <h3>Collecions options</h3>
+    <ul>
+        <li>Create folder inside a collection in order to have your collection organized</li>
+        <img class="m-size-50" src="../img/postman/Collections.png" alt="collection options">
+        <li>In the run collection options you can set iterations and change the way of run (manually, schedule or via
+            cli)</li>
+        <img class="m-size-25" src="../img/postman/runner.png" alt="runner">
+        <li>You can set your schedule hourly daily weekly and send notifications</li>
+        <img class="m-size-50" src="../img/postman/Runs.png" alt="runs">
+    </ul> 
+    <h3>Collections variables</h3>
+    <ul>
+        <li>In the collections options you can store repeated values in variables, initial value it's for share with
+            your team and current will be your local value</li>
+        <img class="m-size-50" src="../img/postman/CollectionsVariables.png" alt="collectionVariables">
+    </ul>
+    <h3>Types of variables</h3>
+    <ul>
+        <li>Local</li>
+        <li>Data file in data section as JSON</li>
+        <li>Environments</li>
+        <li>Collections</li>
+        <li>Global</li>
+    </ul>
+    <h3>We can refer this variables in:</h3>
+    <ul>
+        <li>Test</li>
+        <li>Pre-requests scripts</li>
+        <li>Resquests with {{}}</li>
+    </ul>
+    <h4>How to SET variable in pre-request Script tab</h4>
+    <ul>
+        <li>LOCAL -> pm.globals.set("variableName","variableValue")</li>
+        <li>ENVIRONMENT -> pm.collectionVariables.set("variableName1","variableValue1")</li>
+        <li>COLLECTION -> pm.environment.set("variableName2","variableValue2")</li>
+        <li>GLOBAL -> pm.variables.set("variableName3","variableValue3")</li>
+    </ul>
+
+    <h3>How to GET variable tab</h3>
+    <ul>
+        <li>LOCAL -> pm.globals.get("variableName")</li>
+        <li>ENVIRONMENT -> pm.collectionVariables.get("variableName1")</li>
+        <li>COLLECTION -> pm.environment.get("variableName2")</li>
+        <li>GLOBAL -> pm.variables.get("variableName3")</li>
+        <li>You can print in the value in console console.log (pm.variables.get("variableName3"))</li>
+    </ul>
+    <h3>How to UNSET a variable</h3>
+    <ul>
+        <li>LOCAL -> pm.globals.unset("variableName")</li>
+        <li>ENVIRONMENT -> pm.collectionVariables.unset("variableName1")</li>
+        <li>COLLECTION -> pm.environment.unset("variableName2")</li>
+        <li>GLOBAL -> pm.variables.unset("variableName3")</li>
+    </ul>
+    <ul>
+        <li>Set & get variables in pre-request Script tab example</li>
+        <img class="m-size-35" src="../img/postman/SetgetVariablesPre-request.png" alt="pre-request">
+        <li>Check the variables values in console</li>
+        <img class="m-size-35" src="../img/postman/consoleTab.png" alt="console">
+    </ul>
+    <h3>Environments</h3>
+    <ul>
+        <li>You create environments when you want to save variables with differents to execute the requests</li>
+        <img class="m-size-35" src="../img/postman/Environments.png" alt="environments">
+        <li>You can duplicate variables from a environment to another and then change the values</li>
+        <img class="m-size-35" src="../img/postman/DuplicateEnvironmentVariables.png" alt="duplicateVariables">
+        <li>Make sure that you are changing the environment before run</li>
+        <img class="m-size-35" src="../img/postman/changeEnvironment.png" alt="ChangeThe environment">
+        </ul>
+        <h3>Test</h3>
+        <ul>
+            <li>You can add test validations in the request with JS, there are some snippets created that you can use
+            </li>
+            <img class="m-size-35" src="../img/postman/testResults.png" alt="testResults">
+            <li>You can see the result individually of the test in the test result tab </li>
+            <img class="m-size-35" src="../img/postman/TestResultIndividually.png" alt="testResults">
+            <li>You can see all the test result after run a collection</li>
+            <img class="m-size-35" src="../img/postman/CollectionsTestResult.png" alt="CollectiontestResults">
+        </ul>
+
+        <h3>Handy scripts for debuggin</h3>
+        <ul>
+            <li>console.clear() -> This clears all the logs in the console</li>
+            <li>console.log("This is a log")</li>
+            <li>console.info("This is a info")</li>
+            <li>console.warn("this is a warning")</li>
+            <li>console.error("this is an error")</li>
+            <img class="m-size-35" src="../img/postman/DebugginScripts.png" alt="debuggin">
+        </ul>
+        <h3>how to use data with a json file</h3>
+        <ul>
+            <li>Create a collection/foleder for external json data file</li>
+            <li>create a json file with the data that you are going to use</li>
+            <img class="m-size-35" src="../img/postman/jsonExample.png" alt="json">
+            <li>Run your collection/folder in the runner section and add the json file</li>
+            <img class="m-size-35" src="../img/postman/runnerWithJson.png" alt="json">
+            <li>Create a variable for each data header</li>
+            <img class="m-size-35" src="../img/postman/variablesForJson.png" alt="jsonVariables">
+            <li>Run your collection</li>
+            <li>As you can see in the console you can see more information and the response body</li>
+            <img class="m-size-35" src="../img/postman/consoleResponsejsonInformation.png" alt="jsonInfo">
+        </ul>
+        <h3>Handy validations for variables in a request (make sure that the variable or values is on the request)</h3>
+        <ul><img class="m-size-35" src="../img/postman/variableValidations.png" alt="variablesvalidations"></ul>
+        <h3>Authentication</h3>
+    <ul>
+        <li>You can create variables for authentication token and save it in collections, folders and requests level
+        </li>
+        <img class="m-size-35" src="../img/postman/variablesToken.png" alt="tokenVariables">
+        <li>You can use the token variable in the authentication field</li>
+        <img class="m-size-35" src="../img/postman/saveTokenVariable.png" alt="tokenVariables">
+    </ul>
+    <h3>How to automatize a token response in a variable</h3>
+    <ul>
+        <li>Create a request that gets the token</li>
+        <li>Set a global variable in the test tab that store the response</li>
+        <img class="m-size-35" src="../img/postman/variableForSaveToken.png" alt="tokenVar">
+        <li>Use the global variable in the header that needs authorization</li>
+        <img class="m-size-35" src="../img/postman/useTheTokenVariable.png" alt="tokenVar">
+    </ul>
+  </body>
+</html>
