@@ -1,5 +1,10 @@
 //TIPS MENU
-const tipsList = ["macOS", "VS Code", "GitHub Free Hosting"];
+const tipsList = [
+  "macOS",
+  "VS Code",
+  "GitHub Free Hosting",
+  "Linux-shell-for-jenkins",
+];
 const innerMenuTopics = document.querySelector(".topics-menu");
 //creates a li html tag with each items of the list
 let listItems = "";

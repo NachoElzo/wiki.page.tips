@@ -6,7 +6,6 @@
     <title>Docker</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
-
   <body>
     <h1>Docker</h1>
     <h3>Pre-conditions to install</h3>
@@ -31,23 +30,42 @@
         <span class="terminal-commands">&nbsp;docker compose down</span>
       </li>
     </ul>
-    <h3>Find files and use terminal inside the docker img</h3>
+    <h3>
+      For troubleshooting while installing jenkins pluggins inside a docker
+      container
+    </h3>
     <ul>
+      <li>
+        After installing pluggins in jenkisn like docker pipeline or nodeJs
+      </li>
       <li>Open and run your docker image in docker desktop</li>
-      <img
-        class="m-size-35"
-        src="../img/docker/run-img.png"
-        alt="run-docker-image"
-      />
-      <li>Acces to the image files, logs and terminal</li>
-      <img
-        class="m-size-50"
-        src="../img/docker/img-options.png"
-        alt="image-options"
-      />
+      <li>Go to container section</li>
+      <li>Select the container options</li>
+      <li>Open with vs code</li>
+      <li style="list-style-type: none">
+        <img
+          class="m-size-50"
+          src="../img/docker/vsCodeTerminal.png"
+          alt="run-docker-image"
+        />
+      </li>
+      <li>Open visual code and execute</li>
+      <ul>
+        <li class="bullet-li">docker compose down</li>
+      </ul>
+      <ul>
+        <li>Make sure that containers were removed from docker desktop</li>
+      </ul>
+      <ul>
+        <li class="bullet-li">docker compose up -d</li>
+      </ul>
+      <ul>
+        <li>Make sure that you container files were restored</li>
+      </ul>
     </ul>
   </body>
 </html>
+
 <!-- COMMAND FOR BUILD DOCKER IMAGE SETED IN DOCKER COMPOSE FILE docker build -t
 my-jenkins . FROM mcr.microsoft.com/playwright:v1.42.1-jammy # CREATING A FOLDER
 FOR STORE THE PROJECT RUN mkdir /app # directory in where we are going to work

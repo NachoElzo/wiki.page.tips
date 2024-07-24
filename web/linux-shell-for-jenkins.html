@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>linux shell commands</title>
+  </head>
+  <body>
+    <h3>Linux shell commands for jenkins</h3>
+    <ul>
+      <li>
+        list all files inside the directory
+        <span class="terminal-commands">&nbsp;sh 'ls'</span>
+      </li>
+      <li>
+        list all files and hidden files inside the directory
+        <span class="terminal-commands">&nbsp;sh 'ls -la'</span>
+      </li>
+      <li>
+        Return an string
+        <span class="terminal-commands">&nbsp;sh 'echo string chars'</span>
+      </li>
+      <li>
+        Creates a folder
+        <span class="terminal-commands">&nbsp;sh 'mkdir folderName'</span>
+      </li>
+      <li>
+        Creates a folder if the folder do no esxist
+        <span class="terminal-commands">&nbsp;sh 'mkdir -p folderName'</span>
+      </li>
+      <li>
+        Creates a file inside the folder
+        <span class="terminal-commands"
+          >&nbsp;sh 'touch folderName/fileName.txt'</span
+        >
+      </li>
+      <li>
+        Insert txt into the file
+        <span class="terminal-commands"
+          >&nbsp;sh 'echo "Text to insert" >> folderName/fileName.txt'</span
+        >
+      </li>
+      <li>
+        Open and reads the file in console
+        <span class="terminal-commands"
+          >&nbsp;sh 'cat folderName/fileName.txt'</span
+        >
+      </li>
+      <li>
+        verify if the file exists
+        <span class="terminal-commands"
+          >&nbsp;sh 'test -f folderName/fileName.txt'</span
+        >
+      </li>
+      <li>
+        Remove a file
+        <span class="terminal-commands"
+          >&nbsp;sh 'rm folderName/fileName.txt'</span
+        >
+      </li>
+      <li>
+        Search for a string inside a file
+        <span class="terminal-commands"
+          >&nbsp;sh 'grep "textToFind" folderName/fileName.txt'</span
+        >
+      </li>
+      <li>
+        Search for more than one string inside a file
+        <span class="terminal-commands"
+          >&nbsp;sh 'grep "textToFind" folderName/fileName.txt' && sh 'grep
+          "other text" folderName/fileName.txt'</span
+        >
+      </li>
+    </ul>
+
+    <ul>
+      * [sh] Before the command is to advice jenkins that we are using shell
+      commands
+    </ul>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux shell</title>
+  </head>
+  <body></body>
+</html>

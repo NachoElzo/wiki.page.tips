@@ -75,6 +75,10 @@
     <h3>Jenkins commands</h3>
     <ul>
       <li>
+        Shell commands for Jenkins projects
+        <a href="./linux-shell-for-jenkins.html"><span>HERE</span></a>
+      </li>
+      <li>
         Install jenkins with brew
         <span class="terminal-commands">&nbsp;brew install jenkins-lts</span>
       </li>
@@ -129,8 +133,9 @@
     <ul>
       <li>Go to the left menu manage jenkins</li>
       <li>Select pluggins</li>
+      <li>open available pluggins section</li>
       <li>
-        Useful pluggins
+        Useful pluggins:
         <ul>
           <li class="bullet-li">NodeJS</li>
           <li class="bullet-li">
@@ -139,10 +144,28 @@
           <li class="bullet-li">
             HTML Publisher plugin (html report for execution)
           </li>
+          <li class="bullet-li">Docker pipeline</li>
         </ul>
       </li>
     </ul>
-
+    <h3>How to publish a HTML report to a pipline</h3>
+    <ul>
+      <li>Install HTML Publisher plugin</li>
+      <li>Search at the end of the pipline config, pipline syntax</li>
+      <li>In sample step add the html report pluggin</li>
+      <li>
+        in html directory, add the path in where the test results are saved
+      </li>
+      <li>In index, add the report file created usually is index.html</li>
+      <li>In report title, add a name to your report</li>
+      <li>Press on generate pipeline script</li>
+      <li>Copy and paste to your post action in your jenkis file</li>
+      <img
+        class="m-size-35"
+        src="../img/jenkins/publish-html-report.png"
+        alt="publishHtml-report"
+      />
+    </ul>
     <h3>How to create a free style project</h3>
     <ul>
       <li>Left menu/ new item</li>
@@ -215,6 +238,64 @@
         class="m-size-50"
         src="../img/jenkins/console-output.png"
         alt="console"
+      />
+    </ul>
+    <h3>Create a SCM pipeline</h3>
+    <ul>
+      <li>Create a jenkinsfile inside your project</li>
+      <li>Designe your pipeline project in the jenkins file created</li>
+      <li>Create a new pipeline project in jenkins</li>
+      <li>In build steps configure:</li>
+      <ul>
+        <li>Add a description of your project</li>
+        <li>Select SCM instead pipeline</li>
+        <li>Select GIT</li>
+        <li>Add the http github path where your project is</li>
+        <li>Select the branch where your project is */main or */master</li>
+        <li>
+          In the script path add the path where your jenkins file is `key
+          sensitive`
+        </li>
+        <img
+          class="m-size-50"
+          src="../img//jenkins/SCM-pipeline.png"
+          alt="path to files created"
+        />
+      </ul>
+    </ul>
+
+    <h3>How to add a set of steps into one in a pipeline</h3>
+    <ul>
+      <li>sh is a common sintax for all commands</li>
+      <img
+        class="m-size-35"
+        src="../img/jenkins/groupCommands.png"
+        alt="pipelines"
+      />
+      <li>Save and build the pipline created</li>
+    </ul>
+
+    <h3>Creates and use variables</h3>
+    <ul>
+      <li>Create an envirtonment object before stages</li>
+      <li>Create a variable (use caps)</li>
+      <li>use the variable adding '$variableName'</li>
+      <img
+        class="m-size-50"
+        src="../img//jenkins/Pipeline-variables.png"
+        alt="pipeline-variable"
+      />
+    </ul>
+    <h3>Reuse node workspaces to avoid creating multiples folders</h3>
+    <ul>
+      <li>
+        This may work when you have dependencies between workspaces in jenkins
+      </li>
+      <li>add: reuseNode true</li>
+      <img
+        class="m-size-35"
+        src="../img//jenkins/reuseNode-workspace.png"
+        alt="reuseNode-workspace"
       />
     </ul>
 
